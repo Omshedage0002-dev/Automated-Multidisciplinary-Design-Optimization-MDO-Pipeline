@@ -1,0 +1,23 @@
+# encoding: utf-8
+# 2026 R1
+SetScriptVersion(Version="26.1.174")
+system1 = GetSystem(Name="SYS")
+setup1 = system1.GetContainer(ComponentName="Setup")
+setup1.Edit()
+geometry1 = system1.GetContainer(ComponentName="Geometry")
+geometryProperties1 = geometry1.GetGeometryProperties()
+geometryProperties1.GeometryImportAnalysisType = "AnalysisType_2D"
+setupComponent1 = system1.GetComponent(Name="Setup")
+setupComponent1.Update(AllDependencies=True)
+modelComponent1 = system1.GetComponent(Name="Model")
+modelComponent1.Refresh()
+geometryProperties1.GeometryImportAnalysisType = "AnalysisType_3D"
+model1 = system1.GetContainer(ComponentName="Model")
+model1.Exit()
+setup1.Edit()
+geometryComponent1 = system1.GetComponent(Name="Geometry")
+geometryComponent1.Update(AllDependencies=True)
+modelComponent1.Refresh()
+setupComponent1.Refresh()
+setup1.Edit()
+Save(Overwrite=True)

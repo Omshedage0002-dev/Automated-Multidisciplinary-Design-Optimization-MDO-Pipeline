@@ -1,0 +1,42 @@
+# encoding: utf-8
+# 2026 R1
+SetScriptVersion(Version="26.1.174")
+template1 = GetTemplate(
+    TemplateName="Static Structural",
+    Solver="ANSYS")
+system1 = template1.CreateSystem()
+favorites1 = EngData.LoadFavoriteItems()
+library1 = EngData.OpenLibrary(
+    Name="General Materials",
+    Source="General_Materials.xml")
+engineeringData1 = system1.GetContainer(ComponentName="Engineering Data")
+matl1 = engineeringData1.ImportMaterial(
+    Name="Aluminum Alloy",
+    Source="General_Materials.xml")
+matl2 = engineeringData1.ImportMaterial(
+    Name="Structural Steel",
+    Source="General_Materials.xml")
+matl2.Delete()
+material1 = engineeringData1.GetMaterial(Name="Structural Steel")
+material1.Delete()
+EngData.EnableFilter(Enable=False)
+EngData.EnableFilter()
+geometry1 = system1.GetContainer(ComponentName="Geometry")
+geometry1.Edit()
+geometry1.Exit()
+geometry1.SetFile(FilePath="C:/Users/Om/Downloads/airfoil.step")
+modelComponent1 = system1.GetComponent(Name="Model")
+modelComponent1.Refresh()
+setupComponent1 = system1.GetComponent(Name="Setup")
+setupComponent1.Refresh()
+setup1 = system1.GetContainer(ComponentName="Setup")
+setup1.Edit()
+model1 = system1.GetContainer(ComponentName="Model")
+model1.Exit()
+Save(Overwrite=True)
+setup1.Edit()
+model1.Exit()
+designPoint1 = Parameters.GetDesignPoint(Name="0")
+backgroundSession1 = UpdateAllDesignPoints(DesignPoints=[designPoint1])
+setup1.Edit()
+Save(Overwrite=True)

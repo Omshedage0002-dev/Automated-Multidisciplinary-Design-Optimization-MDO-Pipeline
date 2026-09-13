@@ -1,0 +1,40 @@
+﻿# encoding: utf-8
+# 2026 R1
+SetScriptVersion(Version="26.1.174")
+designPoint1 = Parameters.GetDesignPoint(Name="0")
+backgroundSession1 = UpdateAllDesignPoints(DesignPoints=[designPoint1])
+# encoding: utf-8
+# encoding: utf-8
+# encoding: utf-8
+import os
+
+# 0. OPEN THE SAVED PROJECT
+# Replace 'YOUR_PROJECT_NAME.wbpj' with your actual project file name!
+project_path = r"C:\Users\Om\Documents\Aerodynamic Performance Analysis of Multi-Element Airfoils\fea_macro_v2.wbpj"
+
+Open(FilePath=project_path)
+
+# 1. Force ANSYS to run the simulation and update the results
+# This will fix the "yellow lightning bolt" you saw next to P4
+Update()
+
+# 2. Define the exact path where you want the results saved
+output_path = r"C:\Users\Om\Documents\Aerodynamic Performance Analysis of Multi-Element Airfoils\results.txt"
+
+# 3. Extract the parameters (Mass is P3, Stress is P4 based on your screenshot)
+try:
+    mass_param = Parameters.GetParameter(Name="P3")
+    stress_param = Parameters.GetParameter(Name="P4")
+
+    mass_val = mass_param.Value.Value
+    stress_val = stress_param.Value.Value
+
+    # 4. Write the results to the text file
+    with open(output_path, "w") as f:
+        f.write("Mass," + str(mass_val) + "\n")
+        f.write("Stress," + str(stress_val) + "\n")
+
+except Exception as e:
+    # If something goes wrong, write the error to the text file so we can see it
+    with open(output_path, "w") as f:
+        f.write("Error: " + str(e) + "\n")

@@ -1,0 +1,93 @@
+﻿# 
+# This file contains the parameter values of the Design Points successfully updated by Ansys Workbench.
+# Project name: rib_project
+# Creation date: 07/21/2026 21:54:50
+# 
+# 07/21/2026 21:54:50
+# The parameters defined in the project are:
+# ,P1 - 2026-07-16-22-19-32-414|Body1 Mass [kg],P2 - Equivalent Stress Maximum [MPa]
+# 
+# The following header line defines the name of the columns by reference to the parameters.
+Name,P1,P2
+DP 0,1.39174852123371,537.923654091034
+DP 0,1.39174852123371,512.34767566771052
+# 
+# A non parametric change occurred and invalidated design point results.
+# 07/21/2026 22:05:48
+# 
+# 
+# 07/21/2026 22:09:19
+# Parameters have been added and/or removed. The parameters now defined in the project are:
+# ,P1 - 2026-07-16-22-19-32-414|Body1 Mass [kg],P2 - Equivalent Stress Maximum [MPa]
+# 
+# The following header line defines the name of the columns by reference to the parameters.
+Name,P1,P2
+DP 0,1.39174852123371,537.92365409103365
+# 
+# A non parametric change occurred and invalidated design point results.
+# 07/21/2026 22:29:45
+# 
+# 
+# 07/21/2026 22:35:39
+# Parameters have been added and/or removed. The parameters now defined in the project are:
+# ,P1 - 2026-07-16-22-19-32-414|Body1 Mass [kg],P4 - Equivalent Stress Maximum [MPa],P3 - Geometry Mass [kg]
+# 
+# The following header line defines the name of the columns by reference to the parameters.
+Name,P1,P4,P3
+DP 0,1.39174852123371,537.92365409103365,1.39174852123371
+# 
+# A non parametric change occurred and invalidated design point results.
+# 07/21/2026 22:39:31
+# 
+# 
+# 07/21/2026 22:45:14
+# Parameters have been added and/or removed. The parameters now defined in the project are:
+# ,P1 - 2026-07-16-22-19-32-414|Body1 Mass [kg],P4 - Equivalent Stress Maximum [MPa],P3 - Geometry Mass [kg]
+# 
+# The following header line defines the name of the columns by reference to the parameters.
+Name,P1,P4,P3
+DP 0,1.39174852123371,537.92365409103365,1.39174852123371
+# 
+# A non parametric change occurred and invalidated design point results.
+# 07/23/2026 22:45:02
+# 
+# 
+# A non parametric change occurred and invalidated design point results.
+# 07/24/2026 21:32:19
+# 
+# 
+# A non parametric change occurred and invalidated design point results.
+# 07/24/2026 21:55:56
+# 
+# 
+# A non parametric change occurred and invalidated design point results.
+# 07/24/2026 22:22:59
+# 
+# 
+# A non parametric change occurred and invalidated design point results.
+# 07/24/2026 23:06:08
+# 
+# 
+# A non parametric change occurred and invalidated design point results.
+# 07/28/2026 23:29:23
+# 
+# 
+# A non parametric change occurred and invalidated design point results.
+# 07/29/2026 21:43:56
+# 
+# 
+# A non parametric change occurred and invalidated design point results.
+# 08/01/2026 21:22:50
+# 
+# 
+# A non parametric change occurred and invalidated design point results.
+# 08/31/2026 23:23:11
+# 
+# 
+# A non parametric change occurred and invalidated design point results.
+# 08/31/2026 23:31:46
+# 
+# 
+# A non parametric change occurred and invalidated design point results.
+# 09/05/2026 22:14:51
+# 
